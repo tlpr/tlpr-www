@@ -25,13 +25,22 @@ else
 	#	in session cookie $_SESSION["LANGUAGE"]
 	#
 
-	$accept_language_http_header = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
-	$user_language = substr($accept_language_http_header, 0, 2);
+	if (!isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]))
+		
+		$user_language = $default_language;
+	
+	else
+	{
+	
+		$accept_language_http_header = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
+		$user_language = substr($accept_language_http_header, 0, 2);
 
+	}
+	
 	$locale_directory_contents = scandir("misc/locale");
 	$available_languages = array_diff($locale_directory_contents, array(".", ".."));
 	
-	if ( in_array($user_language, $available_languages) )
+	if ( in_array("$user_language.php", $available_languages) )
 		
 		require_once("misc/locale/$user_language.php");
 

@@ -16,13 +16,15 @@
 		"brand-description-short" => "",
 		"brand-description-long"  => "",
 		
-		"page-title-index" => "Strona główna",
-		"page-title-about" => "O nas",
-		"page-title-community" => "Społeczność",
-		"page-title-contact" => "Kontakt",
+		"page-index" => "Strona główna",
+		"page-about" => "O nas",
+		"page-community" => "Społeczność",
+		"page-contact" => "Kontakt",
 		
 		"blog-panel-name" => "Najnowsze wiadomości",
 		"user-panel-name" => "Panel użytkownika",
-		"playback-history-name" => "Historia odtworzeń"
+		"playback-history-name" => "Historia odtworzeń",
+		
+		"player-html5-no-support" => "Twoja przeglądarka nie wspiera odtwarzaczy HTML5, zachęcamy do słuchania naszego strumienia poprzez programy zewnętrzne (VLC, Winamp, mpxplay). Odnośnik do playlisty: "
 	
 	);
