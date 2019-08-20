@@ -25,6 +25,8 @@
 		"user-panel-name" => "User panel",
 		"playback-history-name" => "History",
 		
+		"blog-read-more" => "Read more...",
+		
 		"player-html5-no-support" => "Your browser does not support HTML5 players, we recommend to listen to our stream using external software like VLC, Winamp or mpxplay. Playlist URL: "
 
 	

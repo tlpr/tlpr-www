@@ -1,6 +1,21 @@
-html, body {
+@font-face {
+	font-family: "Goodlight";
+	src: url("media/fonts/Goodlight.otf");
+} @font-face {
+	font-family: "Goodlight";
+	font-weight: 200;
+	src: url("media/fonts/Goodlight-Light.otf");
+} html, body {
 	background-color: #05021c;
 	padding: 0; margin: 0;
+} * { 
+	font-family: "Goodlight", "Liberation Sans", sans-serif;
+} a:link {
+	color: white;
+} a:hover {
+	color: red;
+} a:visited {
+	color: #bebebe; /* light grey */
 } #banner {
 	position: relative;
 	width: 100%; height: 30%;
@@ -18,6 +33,7 @@ html, body {
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	height: 65%; width: auto;
+	max-height: 300px;
 	max-width: 50%; min-width: 180px;
 	-o-transition: ease-out .6s;
 	-ms-transition: ease-out .6s;
@@ -74,23 +90,59 @@ html, body {
 	margin-left: 4px;
 	padding: 2px;
 	vertical-align: top;
+} #postcontainer {
+	position: relative; display: inline-block;
+	width: 70%; height: auto;
+	vertical-align: top;
+	margin-right: 4px;
 } .post {
 	position: relative;
-	width: 70%; min-height: 120px;
-	display: inline-block;
+	color: white; padding-bottom: 10px;
 	background-color: #3b538d;
-	margin-right: 4px;
-	padding: 2px;
-	vertical-align: top;
-}#playercontainer {
+	width: 100%; margin-bottom: 20px;
+	min-height: 120px; font-size: .8em;
+} .post .titlebar {
+	text-align: center !important;
+	margin: 0; margin-bottom: 4px;
+} .post h2.titlebar {
+	padding-top: 7px;
+	text-decoration: underline;
+} .post .titlebar:visited {
+	color: white;
+} .post .content {
+	padding-left: 20px; padding-right: 20px;
+} .post a.readmore {
+	position: absolute;
+	right: 20px; bottom: 10px;
+} #playercontainer {
 	width: 100%; height: 70px;
 	position: fixed;
 	bottom: 0; left: 0;
 	background-color: rgba(0, 0, 0, .7);
 } *:focus {
 	outline: none;
-} iframe {
-	display: block;
-	width: 100%; height: 90vh;
+} @media screen and (max-width: 775px) {
+	#panels {
+		width: 95%; position: relative;
+	} #leftpanel, #rightpanel {
+		display: block; width: 100%;
+		margin-right: 0; margin-left: 0;
+	} #postcontainer {
+		margin: 0 auto; text-align: center; width: 100%;
+		margin-right: 0; margin-left: 0;
+	} .post {
+		display: inline-block; width: 49.5%;
+	} .post a.readmore {
+		position: static; margin-left: 5px;
+	}
+} @media screen and (max-width: 545px) {
+	.post {
+		display: block; width: 100%;
+	} #leftpanel, #rightpanel {
+		width: 100%;
+	} #navigation {
+		height: 200px;
+	} #navigation a:link {
+		display: block;
+	}
 }
-

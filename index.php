@@ -9,8 +9,10 @@
 		<META charset="UTF-8" />
 		<META name="author" content="" />
 		<META name="description" content="<?= $locale["brand-description-short"] ?>" />
+		<META name="viewport" content="width=device-width, initial-scale=1.0" />
 		<TITLE><?= $locale["brand-name"] ?> &mdash; <?= $locale["page-index"] ?></TITLE>
 		<LINK rel="stylesheet" type="text/css" media="all" href="style.css" />
+		
 		
 	</HEAD>
 	
@@ -37,28 +39,35 @@
 		
 		<DIV id="panels">
 			
-		<?php
-
-		$all_posts = list_all_posts();
-	  
-	  	foreach ($all_posts[ "id" ] as $post_id):
-			
-			$post_information = get_post_by_id($post_id);
-			?>
-			
-			<DIV class="post">
-				<H3><?= $post_information[ "metadata" ][ "title" ]; ?></H3>
-				<H5><?= $post_information[ "metadata" ][ "date" ]; ?></H5>
-				<HR />
-				<P><?= $post_information[ "contents" ]; ?></P>
-			</DIV>
-			
+			<DIV id="postcontainer">
 			<?php
-			
-		endforeach;
-	
-		?>
-			
+
+			$all_posts = list_all_posts();
+
+			foreach ($all_posts[ "id" ] as $post_id):
+
+				$post_information = get_post_by_id($post_id);
+				$contents = substr($post_information[ "contents" ], 0, $index_max_post_content_length);
+
+				?>
+
+				<DIV class="post">
+					<H2 class="titlebar">
+						<A href="view_post.php?id=<?= $post_id ?>"><?= $post_information[ "metadata" ][ "title" ]; ?></A>
+					</H2>
+					<P class="titlebar"><?= $post_information[ "metadata" ][ "date" ]; ?></P>
+					<HR />
+					<DIV class="content"><?= $contents ?></DIV>
+					<A href="view_post.php?id=<?= $post_id ?>" class="readmore"><?= $locale["blog-read-more"] ?></A>
+				</DIV>
+
+				<?php
+
+			endforeach;
+
+			?>
+			</DIV>
+
 			<DIV id="rightpanel">
 			</DIV>
 			
