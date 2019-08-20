@@ -1,6 +1,6 @@
 <?php
 /*
- * Codename Canterlot
+ * The Las Pegasus Radio
  * This code is licensed under AGPL-3.0-only
  */
 

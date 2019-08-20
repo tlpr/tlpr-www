@@ -1,29 +1,31 @@
-# project-canterlot-www
-Internet radio website that prioritizes web standards, simplicity, accessibility and freedom.
+# tlpr-www
+## Internet radio website that prioritizes web standards, simplicity, accessibility and freedom.
 ---
-## Development roadmap:
+### Development roadmap:
 + **(In progress)** Very basic properly functioning website with HTML5 player.
 + **(Done)** ~~Support for browsers on mobile devices.~~
-+ Displaying current song from the Icecast API and album cover.
-+ Fancy, lightweight, optional JavaScript player.
-+ User accounts and like/dislike song function.
-+ Embedded KiwiIRC client with similar positioning to Facebook's chat.
-+ Text-only website for hardcore backward compatibility.
++ **(In progress)** Displaying current song from the Icecast API and album cover.
++ **(In progress)** Support for multiple audio streams.
++ **(Scheduled)** Fancy, lightweight, optional JavaScript player.
++ **(Scheduled)** Open and easy to use API for external requests. (https://github.com/tlpr/tlpr-api)
++ **(Scheduled)** User accounts and like/dislike song function.
++ **(Scheduled)** Embedded KiwiIRC client with similar positioning to Facebook's chat.
++ **(Scheduled)** Text-only website for hardcore backward compatibility.
 
 Development roadmap may be a subject to change.
 
-## Deploying:
+### Deploying:
 - Clone the repository (git clone https://github.com/noskla/project-canterlot-www.git)
 - Remove the following files and directories:
- - .git
- - README.md
- - CONTRIBUTING.md
+	* .git
+	* README.md
+	* CONTRIBUTING.md
 - Install web server and PHP, if you haven't. Recommended web servers are Apache2 and Nginx.
 - Install composer from your package manager repositories or getcomposer.org
 - Install dependencies using composer: ``composer install`` or ``php composer.phar install``
 - Move all the files and directories to the web server root directory and you're done.
 
-## Third-party packages and content
+### Third-party packages and content
 This software is using "parsedown" package made by erusev.
 It is open-source software licensed under the MIT License
 and copyrighted by Emanuil Rusev, erusev.com.

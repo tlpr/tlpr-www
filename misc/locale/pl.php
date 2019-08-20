@@ -1,6 +1,6 @@
 <?php
 /*
- * Codename Canterlot
+ * The Las Pegasus Radio
  * This code is licensed under AGPL-3.0-only
  */
 
@@ -29,6 +29,10 @@
 		
 		"player-cover-art-image-alt" => "Okładka albumu",
 		"player-html5-no-support" => "Twoja przeglądarka nie wspiera odtwarzaczy HTML5, zachęcamy do słuchania naszego strumienia poprzez programy zewnętrzne (VLC, Winamp, mpxplay). Odnośnik do playlisty: ",
+		"player-hide" => "Ukryj",
+		"player-show" => "Pokaż",
+		"song-loading" => "Pobieranie...",
+		"noscript-song-information" => "Nie można wyświetlić nazwy utworu bez JavaScript",
 		
 		"source-code" => "Ta strona jest wolnym oprogramowaniem."
 	

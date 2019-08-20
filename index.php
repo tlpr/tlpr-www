@@ -12,6 +12,7 @@
 		<META name="viewport" content="width=device-width, initial-scale=1.0" />
 		<TITLE><?= $locale["brand-name"] ?> &mdash; <?= $locale["page-index"] ?></TITLE>
 		<LINK rel="stylesheet" type="text/css" media="all" href="style.css" />
+		<SCRIPT type="text/javascript" src="scripts/main.js"></SCRIPT>
 		
 	</HEAD>
 	
@@ -41,13 +42,18 @@
 			<DIV id="postcontainer">
 			<?php
 
-			$all_posts = array_reverse(list_all_posts()["id"]);
+			$all_posts = array_reverse( list_all_posts()[ "id" ] );
+	  
+	  		if (sizeof($all_posts) > 6)
+				$all_posts = array_slice($all_posts, 0, $max_posts_count_in_index);
 
 			foreach ($all_posts as $post_id):
 
 				$post_information = get_post_by_id($post_id);
+	  			
+	  			# Cut first X characters.
 				$contents = substr($post_information[ "contents" ], 0, $index_max_post_content_length);
-
+	  
 				?>
 
 				<DIV class="post">
@@ -88,22 +94,24 @@
 		</DIV>
 
 		<DIV id="playercontainer">
+			<DIV id="hideplayer"><?= $locale[ "player-hide" ] ?></DIV>
 			<PICTURE id="coverart">
 				<SOURCE type="image/webp" srcset="#" />
 				<SOURCE type="image/jpeg" srcset="#" />
 				<IMG src="#" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
 			</PICTURE>
 			<DIV id="player">
-				<AUDIO controls volume="40">
-					<SOURCE src="<?= $icecast_stream_url ?>" type="<?= $icecast_stream_type ?>" />
-					<SOURCE src="<?= $icecast_stream_url_fallback ?>" type="<?= $icecast_stream_fallback_type ?>" />
-					<P><?= $locale["player-html5-no-support"] ?> <?= $icecast_stream_playlist_dl ?></P>
+				<AUDIO controls volume="40" preload="none">
+					<SOURCE src="<?= $icecast_streams[6]["url"] ?>" type="<?= $icecast_streams[6]["type"] ?>" codecs="opus" />
+					<P><?= $locale["player-html5-no-support"] ?> <?= $icecast_streams[6]["playlist_dl"] ?></P>
 				</AUDIO>
 			</DIV>
 			<DIV id="playbackinformation">
-				<P>Example author - example song</P>
+				<P><?= $locale[ "song-loading" ] ?></P>
 			</DIV>
+			<NOSCRIPT><P><?= $locale[ "song-noscript_song_information" ] ?></P></NOSCRIPT>
 		</DIV>
+		<DIV id="showplayer"><?= $locale[ "player-show" ] ?></DIV>
 		
 	</BODY>
 	
