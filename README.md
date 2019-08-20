@@ -10,6 +10,8 @@ Internet radio website that prioritizes web standards, simplicity, accessibility
 + Embedded KiwiIRC client with similar positioning to Facebook's chat.
 + Text-only website for hardcore backward compatibility.
 
+Development roadmap may be a subject to change.
+
 ## Third-party packages and content
 This software is using "parsedown" package made by erusev.
 It is open-source software licensed under the MIT License

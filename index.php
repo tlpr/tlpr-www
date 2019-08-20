@@ -13,7 +13,6 @@
 		<TITLE><?= $locale["brand-name"] ?> &mdash; <?= $locale["page-index"] ?></TITLE>
 		<LINK rel="stylesheet" type="text/css" media="all" href="style.css" />
 		
-		
 	</HEAD>
 	
 	<BODY>
@@ -42,9 +41,9 @@
 			<DIV id="postcontainer">
 			<?php
 
-			$all_posts = list_all_posts();
+			$all_posts = array_reverse(list_all_posts()["id"]);
 
-			foreach ($all_posts[ "id" ] as $post_id):
+			foreach ($all_posts as $post_id):
 
 				$post_information = get_post_by_id($post_id);
 				$contents = substr($post_information[ "contents" ], 0, $index_max_post_content_length);
@@ -53,9 +52,9 @@
 
 				<DIV class="post">
 					<H2 class="titlebar">
-						<A href="view_post.php?id=<?= $post_id ?>"><?= $post_information[ "metadata" ][ "title" ]; ?></A>
+						<A href="view_post.php?id=<?= $post_id ?>"><?= $post_information[ "metadata" ][ "title" ] ?></A>
 					</H2>
-					<P class="titlebar"><?= $post_information[ "metadata" ][ "date" ]; ?></P>
+					<P class="titlebar"><?= $post_information[ "metadata" ][ "date" ] ?></P>
 					<HR />
 					<DIV class="content"><?= $contents ?></DIV>
 					<A href="view_post.php?id=<?= $post_id ?>" class="readmore"><?= $locale["blog-read-more"] ?></A>
@@ -69,6 +68,21 @@
 			</DIV>
 
 			<DIV id="rightpanel">
+				
+				<H4><?= $locale[ "user-panel-name" ] ?></H4>
+				<HR />
+				<P>User accounts are scheduled for development.</P>
+				<BR />
+				
+				<H4><?= $locale[ "playback-history-name" ] ?></H4>
+				<HR />
+				<P>Playback history is scheduled for development.</P>
+				
+				<HR />
+				
+				<P id="footer"><?= $copyright ?> <BR /> <A href="<?= $source_code_url ?>"><?= $locale[ "source-code" ] ?></A></P>
+				
+				
 			</DIV>
 			
 		</DIV>

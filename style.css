@@ -88,8 +88,10 @@
 	display: inline-block;
 	background-color: #3b538d;
 	margin-left: 4px;
-	padding: 2px;
+	padding: 2px; color: white;
 	vertical-align: top;
+} #rightpanel h4 {
+	text-align: center;
 } #postcontainer {
 	position: relative; display: inline-block;
 	width: 70%; height: auto;
@@ -121,6 +123,10 @@
 	background-color: rgba(0, 0, 0, .7);
 } *:focus {
 	outline: none;
+} #footer {
+	position: absolute;
+	bottom: 2px;
+	font-size: .9em;
 } @media screen and (max-width: 775px) {
 	#panels {
 		width: 95%; position: relative;

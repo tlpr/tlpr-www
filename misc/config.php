@@ -27,6 +27,8 @@ $index_max_post_content_length = 450;
 $source_code_url = "https://github.com/noskla/project-canterlot-www";
 $license = "GNU AGPL-3.0-only : https://www.gnu.org/licenses/agpl-3.0.en.html";
 
+$copyright = "Copyright (C) 2019 github.com/noskla";
+
 $third_party = array(
 	array("erusev/parsedown", "MIT License", "https://github.com/erusev/parsedown"),
 	array("dalerms/Goodlight", "OFL-1.1", "https://www.dafont.com/goodlight.font")

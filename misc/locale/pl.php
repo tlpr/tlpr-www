@@ -27,6 +27,8 @@
 		
 		"blog-read-more" => "Czytaj dalej...",
 		
-		"player-html5-no-support" => "Twoja przeglądarka nie wspiera odtwarzaczy HTML5, zachęcamy do słuchania naszego strumienia poprzez programy zewnętrzne (VLC, Winamp, mpxplay). Odnośnik do playlisty: "
+		"player-html5-no-support" => "Twoja przeglądarka nie wspiera odtwarzaczy HTML5, zachęcamy do słuchania naszego strumienia poprzez programy zewnętrzne (VLC, Winamp, mpxplay). Odnośnik do playlisty: ",
+		
+		"source-code" => "Ta strona jest wolnym oprogramowaniem."
 	
 	);
