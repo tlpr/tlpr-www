@@ -27,6 +27,7 @@
 		
 		"blog-read-more" => "Read more...",
 		
+		"player-cover-art-image-alt" => "Album cover art",
 		"player-html5-no-support" => "Your browser does not support HTML5 players, we recommend to listen to our stream using external software like VLC, Winamp or mpxplay. Playlist URL: ",
 		
 		"source-code" => "This website is free software."

@@ -88,12 +88,20 @@
 		</DIV>
 
 		<DIV id="playercontainer">
+			<PICTURE id="coverart">
+				<SOURCE type="image/webp" srcset="#" />
+				<SOURCE type="image/jpeg" srcset="#" />
+				<IMG src="#" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
+			</PICTURE>
 			<DIV id="player">
 				<AUDIO controls volume="40">
 					<SOURCE src="<?= $icecast_stream_url ?>" type="<?= $icecast_stream_type ?>" />
 					<SOURCE src="<?= $icecast_stream_url_fallback ?>" type="<?= $icecast_stream_fallback_type ?>" />
 					<P><?= $locale["player-html5-no-support"] ?> <?= $icecast_stream_playlist_dl ?></P>
 				</AUDIO>
+			</DIV>
+			<DIV id="playbackinformation">
+				<P>Example author - example song</P>
 			</DIV>
 		</DIV>
 		
