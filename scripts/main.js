@@ -11,6 +11,7 @@ window.addEventListener("load", function(){
 	// display: none; by default to hide button to users with JS disabled.
 	hide_button.style.display = "block";
 	document.getElementById("playbackinformation").style.display = "block";
+	document.getElementById("noscriptwarning").style.display = "none";
 	
 	hide_button.addEventListener("click", function(){ 
 
@@ -32,9 +33,9 @@ window.addEventListener("load", function(){
 	
 	playback_information_div = document.getElementById("playbackinformation");
 	
-	function getSongInfo() {
+	function getSongInfo(source_id=0) {
 		var request = new XMLHttpRequest();
-		request.open('GET', window.location.href + "media/song_raw.php?source_id=0", true);
+		request.open('GET', window.location.href + "media/song_raw.php?source_id=" + source_id, true);
 		request.send(null);
 		request.onreadystatechange = function () {
 			if (request.readyState === 4 && request.status === 200) {
@@ -45,7 +46,6 @@ window.addEventListener("load", function(){
 			}
 		}
 	}
-	
 	getSongInfo();
 	
 	if (!Array.prototype.forEach)
@@ -76,11 +76,12 @@ window.addEventListener("load", function(){
 	
 		tab.addEventListener("click", function(){
 		
-			[].forEach.call(tabs, function(t){ t.style.background = "#121212"; });
+			[].forEach.call(tabs, function(t){ t.style.background = "#333333"; });
 			tab.style.background = "black";
 			[].forEach.call(streams, function(s){ s.style.display = "none"; });
 			stream_id = tab.getAttribute("id").slice(-1);
 			document.getElementById("stream-" + stream_id).style.display = "inline-block";
+			getSongInfo(stream_id);
 		
 		}, false);
 	

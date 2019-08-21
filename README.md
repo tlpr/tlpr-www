@@ -20,9 +20,10 @@
 + **(Delayed)** *Fancy, lightweight, optional JavaScript player.*
 
 Development roadmap may be a subject to change.
+To propose a new feature, improvement, report a bug or contribute code, please see CONTRIBUTIONS.md
 
 ### Deploying:
-- Clone the repository (git clone https://github.com/noskla/project-canterlot-www.git)
+- Clone the repository (git clone https://github.com/tlpr/tlpr-www)
 - Remove the following files and directories:
 	* .git
 	* README.md

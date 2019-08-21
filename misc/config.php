@@ -13,17 +13,17 @@ $default_language = "pl";
 
 $icecast_streams = array(
 
-	array("id" => 0, "url" => "#", "info" => "320kbps", "type" => "audio/ogg", "playlist_dl" => "#"),
-	array("id" => 1, "url" => "#", "info" => "128kbps", "type" => "audio/ogg", "playlist_dl" => "#"),
-	array("id" => 2, "url" => "#", "info" => "64kbps", "type" => "audio/ogg", "playlist_dl" => "#")
+	array("url" => "#", "info" => "320kbps", "type" => "audio/ogg", "playlist_dl" => "#"),
+	array("url" => "#", "info" => "128kbps", "type" => "audio/ogg", "playlist_dl" => "#"),
+	array("url" => "#", "info" => "64kbps", "type" => "audio/ogg", "playlist_dl" => "#")
 
-	# ID: Index of source in icestats inside status-json.xsl
 	# url: Direct link to the stream
 	# info: information of stream shown on the list
 	# type: MIME type of stream (examples: audio/ogg, audio/mpeg)
 	# playlist_dl: Download link to the .m3u file (usually it's the same as url + .m3u)
 	# You're allowed to add as many stream you like, but be respectful of your user and don't add more than 10.
 	# Icecast stream is REQUIRED to have "title".
+	# The index of the array in this list should be the same as index of the array in status-json.xsl
 	
 );
 

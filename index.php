@@ -33,6 +33,10 @@
 			</NAV>
 		</DIV>
 		
+		<DIV id="noscriptwarning">
+			<?= $locale[ "noscript-warn" ] ?>
+		</DIV>
+		
 		<DIV id="panels">
 			
 			<DIV id="postcontainer">
@@ -89,28 +93,30 @@
 			
 		</DIV>
 
-		<DIV id="playercontainer">
-			<?php foreach ($icecast_streams as $id => $stream): ?>
-			<DIV class="switchstream" id="streamswitcher-<?= $id ?>" style="left: <?= ($id * 125) + 10 ?>px;"> <?= $id ?> - <?= $stream[ "info" ] ?> </DIV>
-			<?php endforeach; ?>
-			
-			<DIV id="hideplayer"><?= $locale[ "player-hide" ] ?></DIV>
-			
-			<?php foreach ($icecast_streams as $id => $stream): ?>
-			<DIV class="player" id="stream-<?= $id ?>">
-				<IMG src="media/albums/default-album-cover.jpg" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
-				<AUDIO controls volume="40" preload="none">
-					<SOURCE src="<?= $stream["url"] ?>" type="<?= $stream["type"] ?>" codecs="opus" />
-					<P><?= $locale["player-html5-no-support"] ?> <?= $stream["playlist_dl"] ?></P>
-				</AUDIO>
+		<DIV style="text-align:center">
+			<DIV id="playercontainer" style="text-align:left">
+				<?php foreach ($icecast_streams as $id => $stream): ?>
+				<DIV class="switchstream" id="streamswitcher-<?= $id ?>" style="left: <?= ($id * 125) + 10 ?>px;"> <?= $id ?> - <?= $stream[ "info" ] ?> </DIV>
+				<?php endforeach; ?>
+
+				<DIV id="hideplayer"><?= $locale[ "player-hide" ] ?></DIV>
+
+				<?php foreach ($icecast_streams as $id => $stream): ?>
+				<DIV class="player" id="stream-<?= $id ?>">
+					<IMG src="media/albums/default-album-cover.jpg" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
+					<AUDIO controls volume="40" preload="none">
+						<SOURCE src="<?= $stream["url"] ?>" type="<?= $stream["type"] ?>" codecs="opus" />
+						<P><?= $locale["player-html5-no-support"] ?> <?= $stream["playlist_dl"] ?></P>
+					</AUDIO>
+				</DIV>
+				<?php endforeach; ?>
+
+				<DIV id="playbackinformation">
+					<P><?= $locale[ "song-loading" ] ?></P>
+				</DIV>
+
+				<NOSCRIPT><P><?= $locale[ "song-noscript_song_information" ] ?></P></NOSCRIPT>
 			</DIV>
-			<?php endforeach; ?>
-			
-			<DIV id="playbackinformation">
-				<P><?= $locale[ "song-loading" ] ?></P>
-			</DIV>
-			
-			<NOSCRIPT><P><?= $locale[ "song-noscript_song_information" ] ?></P></NOSCRIPT>
 		</DIV>
 		
 		<DIV id="showplayer"><?= $locale[ "player-show" ] ?></DIV>
