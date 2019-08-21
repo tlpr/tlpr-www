@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
 	
 	playback_information_div = document.getElementById("playbackinformation");
 	
-	function getSongInfo(source_id=0) {
+	function getSongInfo(source_id) {
 		var request = new XMLHttpRequest();
 		request.open('GET', window.location.href + "media/song_raw.php?source_id=" + source_id, true);
 		request.send(null);
@@ -46,7 +46,7 @@ window.addEventListener("load", function(){
 			}
 		}
 	}
-	getSongInfo();
+	getSongInfo(0);
 	
 	if (!Array.prototype.forEach)
 	{
