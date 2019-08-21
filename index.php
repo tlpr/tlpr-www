@@ -20,11 +20,7 @@
 		
 		<DIV id="banner">
 			<A href=".">
-				<PICTURE>
-					<SOURCE type="image/webp" srcset="media/logo/logo-optimized.webp" />
-					<SOURCE type="image/png" srcset="media/logo/logo-optimized.png" />
-					<IMG src="media/logo/logo-optimized.png" alt="<?= $locale["brand-name"] ?>" />
-				</PICTURE>
+				<IMG src="media/logo/logo-optimized.png" alt="<?= $locale["brand-name"] ?>" />
 			</A>
 		</DIV>
 		
@@ -94,23 +90,29 @@
 		</DIV>
 
 		<DIV id="playercontainer">
+			<?php foreach ($icecast_streams as $id => $stream): ?>
+			<DIV class="switchstream" id="streamswitcher-<?= $id ?>" style="left: <?= ($id * 125) + 10 ?>px;"> <?= $id ?> - <?= $stream[ "info" ] ?> </DIV>
+			<?php endforeach; ?>
+			
 			<DIV id="hideplayer"><?= $locale[ "player-hide" ] ?></DIV>
-			<PICTURE id="coverart">
-				<SOURCE type="image/webp" srcset="#" />
-				<SOURCE type="image/jpeg" srcset="#" />
-				<IMG src="#" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
-			</PICTURE>
-			<DIV id="player">
+			
+			<?php foreach ($icecast_streams as $id => $stream): ?>
+			<DIV class="player" id="stream-<?= $id ?>">
+				<IMG src="media/albums/default-album-cover.jpg" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
 				<AUDIO controls volume="40" preload="none">
-					<SOURCE src="<?= $icecast_streams[6]["url"] ?>" type="<?= $icecast_streams[6]["type"] ?>" codecs="opus" />
-					<P><?= $locale["player-html5-no-support"] ?> <?= $icecast_streams[6]["playlist_dl"] ?></P>
+					<SOURCE src="<?= $stream["url"] ?>" type="<?= $stream["type"] ?>" codecs="opus" />
+					<P><?= $locale["player-html5-no-support"] ?> <?= $stream["playlist_dl"] ?></P>
 				</AUDIO>
 			</DIV>
+			<?php endforeach; ?>
+			
 			<DIV id="playbackinformation">
 				<P><?= $locale[ "song-loading" ] ?></P>
 			</DIV>
+			
 			<NOSCRIPT><P><?= $locale[ "song-noscript_song_information" ] ?></P></NOSCRIPT>
 		</DIV>
+		
 		<DIV id="showplayer"><?= $locale[ "player-show" ] ?></DIV>
 		
 	</BODY>

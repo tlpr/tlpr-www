@@ -34,7 +34,7 @@ window.addEventListener("load", function(){
 	
 	function getSongInfo() {
 		var request = new XMLHttpRequest();
-		request.open('GET', window.location.href + "media/song_raw.php?source_id=6", true);
+		request.open('GET', window.location.href + "media/song_raw.php?source_id=0", true);
 		request.send(null);
 		request.onreadystatechange = function () {
 			if (request.readyState === 4 && request.status === 200) {
@@ -48,7 +48,43 @@ window.addEventListener("load", function(){
 	
 	getSongInfo();
 	
+	if (!Array.prototype.forEach)
+	{
+	  Array.prototype.forEach = function(fun)
+	  {
+		var len = this.length;
+		if (typeof fun != "function")
+		  throw new TypeError();
+
+		var thisp = arguments[1];
+		for (var i = 0; i < len; i++)
+		{
+		  if (i in this)
+			fun.call(thisp, this[i], i, this);
+		}
+	  };
+	}
 	
+	/* Multiple streams */
+	document.getElementById("stream-0").style.display = "inline-block";
+	document.getElementById("streamswitcher-0").style.background = "black";
+	
+	var tabs = document.getElementsByClassName("switchstream");
+	var streams = document.getElementsByClassName("player");
+	
+	[].forEach.call(tabs, function(tab){
+	
+		tab.addEventListener("click", function(){
+		
+			[].forEach.call(tabs, function(t){ t.style.background = "#121212"; });
+			tab.style.background = "black";
+			[].forEach.call(streams, function(s){ s.style.display = "none"; });
+			stream_id = tab.getAttribute("id").slice(-1);
+			document.getElementById("stream-" + stream_id).style.display = "inline-block";
+		
+		}, false);
+	
+	});
 	
 }, false);
 

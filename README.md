@@ -3,14 +3,21 @@
 ---
 ### Development roadmap:
 + **(In progress)** Very basic properly functioning website with HTML5 player.
+	- **(Nearly done)** Index page - take longer than the rest, other pages will base on it
+	- **(Scheduled)** About subpage
+	- **(Scheduled)** Community subpage
+	- **(Scheduled)** Contact subpage
+	- **(Scheduled)** Donations page
++ **(Done)** ~~Multilanguage support.~~
 + **(Done)** ~~Support for browsers on mobile devices.~~
++ **(Done)** ~~Support for multiple audio streams.~~
 + **(In progress)** Displaying current song from the Icecast API and album cover.
-+ **(In progress)** Support for multiple audio streams.
-+ **(Scheduled)** Fancy, lightweight, optional JavaScript player.
-+ **(Scheduled)** Open and easy to use API for external requests. (https://github.com/tlpr/tlpr-api)
++ **(Scheduled)** Playback history in the sidebar
 + **(Scheduled)** User accounts and like/dislike song function.
++ **(Scheduled)** Website administration panel
 + **(Scheduled)** Embedded KiwiIRC client with similar positioning to Facebook's chat.
 + **(Scheduled)** Text-only website for hardcore backward compatibility.
++ **(Delayed)** *Fancy, lightweight, optional JavaScript player.*
 
 Development roadmap may be a subject to change.
 

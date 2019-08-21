@@ -10,8 +10,8 @@
 		"language-name" => "Polski",
 		"language-name-eng" => "Polish",
 		
-		"brand-name" => "Codename Canterlot",
-		"brand-name-short" => "CC",
+		"brand-name" => "Radio Las Pegasus",
+		"brand-name-short" => "TLPR",
 		
 		"brand-description-short" => "",
 		"brand-description-long"  => "",
