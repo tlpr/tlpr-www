@@ -6,8 +6,14 @@
 	
 	<HEAD>
 		
+		 <!--[if IE]>
+		<META http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+		<![endif]-->
+		<![if !IE]>
 		<META charset="UTF-8" />
-		<META name="author" content="" />
+		<![endif]>
+		
+		<META name="author" content="TLPR developers" />
 		<META name="description" content="<?= $locale["brand-description-short"] ?>" />
 		<META name="viewport" content="width=device-width, initial-scale=1.0" />
 		<TITLE><?= $locale["brand-name"] ?> &mdash; <?= $locale["page-index"] ?></TITLE>
@@ -104,7 +110,7 @@
 				<?php foreach ($icecast_streams as $id => $stream): ?>
 				<DIV class="player" id="stream-<?= $id ?>">
 					<IMG src="media/albums/default-album-cover.jpg" alt="<?= $locale[ "player-cover-art-image-alt" ] ?>" id="coverart" /> 
-					<AUDIO controls volume="40" preload="none">
+					<AUDIO controls volume="40" preload="none" autobuffer="none">
 						<SOURCE src="<?= $stream["url"] ?>" type="<?= $stream["type"] ?>" codecs="opus" />
 						<P><?= $locale["player-html5-no-support"] ?> <?= $stream["playlist_dl"] ?></P>
 					</AUDIO>

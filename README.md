@@ -11,7 +11,8 @@
 + **(Done)** ~~Multilanguage support.~~
 + **(Done)** ~~Support for browsers on mobile devices.~~
 + **(Done)** ~~Support for multiple audio streams.~~
-+ **(In progress)** Displaying current song from the Icecast API and album cover.
++ **(Done)** ~~Displaying current song from the Icecast API.~~
++ **(In progress)** Display album cover.
 + **(Scheduled)** Playback history in the sidebar
 + **(Scheduled)** User accounts and like/dislike song function.
 + **(Scheduled)** Website administration panel
@@ -21,6 +22,21 @@
 
 Development roadmap may be a subject to change.
 To propose a new feature, improvement, report a bug or contribute code, please see CONTRIBUTIONS.md
+
+### Compatibility:
+Site's CSS and JS has been tested and confirmed to, at least, partially work with:
+- Modern mainstream browsers:
+	- Blink (Chrome 78.0.3890.0) - ok
+	- Gecko/Servo (Firefox 70.0a1) - ok
+	- Goanna (Pale Moon 28.6.1) - ok
+	- WebKit (Otter Browser 1.0.81-dev) - ok
+- Modern minimalistic browsers:
+	- NetSurf 3.9 - only JavaScript-required features does not work
+	- Dillo 3 - JavaScript and some styling does not work, still usable
+	- Text-only browsers (Links, w3m) - usable
+- Backward compatibility:
+	- Presto (Opera 12.16) - only player does not work
+	- Trident (MSIE 6) - only JavaScript-required features does not work
 
 ### Deploying:
 - Clone the repository (git clone https://github.com/tlpr/tlpr-www)

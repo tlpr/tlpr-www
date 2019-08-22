@@ -2,6 +2,8 @@
 
 window.addEventListener("load", function(){
 	
+	var active_tab = 0;
+	
 	// Show/Hide player
 	var playercontainer = document.getElementById("playercontainer");
 	
@@ -46,7 +48,7 @@ window.addEventListener("load", function(){
 			}
 		}
 	}
-	getSongInfo(0);
+	getSongInfo(active_tab);
 	
 	if (!Array.prototype.forEach)
 	{
@@ -65,6 +67,8 @@ window.addEventListener("load", function(){
 	  };
 	}
 	
+	window.setInterval(getSongInfo, 8000, active_tab);
+	
 	/* Multiple streams */
 	document.getElementById("stream-0").style.display = "inline-block";
 	document.getElementById("streamswitcher-0").style.background = "black";
@@ -81,6 +85,7 @@ window.addEventListener("load", function(){
 			[].forEach.call(streams, function(s){ s.style.display = "none"; });
 			stream_id = tab.getAttribute("id").slice(-1);
 			document.getElementById("stream-" + stream_id).style.display = "inline-block";
+			active_tab = stream_id
 			getSongInfo(stream_id);
 		
 		}, false);
