@@ -12,7 +12,7 @@ ini_set("error_reporting", E_ALL);
 $default_language = "pl";
 
 # Switch to HTTPS automatically if Upgrade-Insecure-Requests header is enabled.
-$upgrade_https = true;
+$upgrade_https = false;
 
 $icecast_streams = array(
 
@@ -44,7 +44,7 @@ $max_posts_count_in_index = 4;
 $source_code_url = "https://github.com/tlpr/tlpr-www";
 $license = "GNU AGPL-3.0-only : https://www.gnu.org/licenses/agpl-3.0.en.html";
 
-$copyright = "Copyright (C) 2019 The Las Pegasus Radio";
+$copyright = "Copyleft (C) 2019 The Las Pegasus Radio";
 
 $third_party = array(
 	array("erusev/parsedown", "MIT License", "https://github.com/erusev/parsedown"),

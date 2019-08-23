@@ -55,3 +55,7 @@ This software is using "parsedown" package made by erusev.
 It is open-source software licensed under the MIT License
 and copyrighted by Emanuil Rusev, erusev.com.
 https://github.com/erusev/parsedown
+
+Layout of this website is using "Liberty Sans" font
+licensed under the GNU GPL license.
+https://www.dafont.com/liberty-sans.font
