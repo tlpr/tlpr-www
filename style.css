@@ -1,15 +1,8 @@
-@font-face {
-	font-family: "Goodlight";
-	src: url("media/fonts/Goodlight.otf");
-} @font-face {
-	font-family: "Goodlight";
-	font-weight: 200;
-	src: url("media/fonts/Goodlight-Light.otf");
-} html, body {
+html, body {
 	background-color: #05021c;
 	padding: 0; margin: 0;
 } * { 
-	font-family: "Goodlight", "Liberation Sans", sans-serif;
+	font-family: "Liberation Sans", sans-serif;
 } a:link {
 	color: white;
 } a:hover {

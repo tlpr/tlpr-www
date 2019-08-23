@@ -43,7 +43,8 @@
 		
 		"blog-panel-name" => "News",
 		"user-panel-name" => "User panel",
-		"playback-history-name" => "History",
+		"playback-history-name" => "Playback history",
+		"playback-history-noscript" => "This function doesn't work with JavaScript disabled.",
 		
 		"blog-read-more" => "Read more...",
 		

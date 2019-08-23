@@ -3,6 +3,9 @@
 window.addEventListener("load", function(){
 	
 	var active_tab = 0;
+	var old_element;
+	
+	var playbackhistory = document.getElementById("playbackhistory");
 	
 	// Show/Hide player
 	var playercontainer = document.getElementById("playercontainer");
@@ -43,7 +46,34 @@ window.addEventListener("load", function(){
 			if (request.readyState === 4 && request.status === 200) {
 				var type = request.getResponseHeader('Content-Type');
 				if (type.indexOf("text") !== 1) {
+					
 					playback_information_div.innerHTML = "<P>" + request.responseText + "</P>";
+					
+					if ( !playbackhistory.hasChildNodes() )
+					{
+						playbackhistory.innerHTML = "";
+						p_history_list = document.createElement("UL");
+						p_history_list.setAttribute("id", "p_history_list");
+						playbackhistory.appendChild(p_history_list);
+					}
+					
+					else {
+					
+						
+						p_history_list = document.getElementById("p_history_list");
+						list_entry = document.createElement("LI");
+						list_entry.appendChild(document.createTextNode(request.responseText));
+						
+						if (p_history_list.length >= 10)
+							p_history_list.lastChild.remove();
+						
+						if (old_element !== list_entry.innerHTML)
+							p_history_list.insertBefore(list_entry, p_history_list.childNodes[0]);
+					
+						old_element = list_entry.innerHTML;
+						
+					}
+					
 				}
 			}
 		}

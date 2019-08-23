@@ -44,6 +44,7 @@
 		"blog-panel-name" => "Najnowsze wiadomości",
 		"user-panel-name" => "Panel użytkownika",
 		"playback-history-name" => "Historia odtworzeń",
+		"playback-history-noscript" => "Ta funkcja wymaga włączonego JavaScript.",
 		
 		"blog-read-more" => "Czytaj dalej...",
 		

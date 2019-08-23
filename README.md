@@ -12,13 +12,14 @@
 + **(Done)** ~~Support for browsers on mobile devices.~~
 + **(Done)** ~~Support for multiple audio streams.~~
 + **(Done)** ~~Displaying current song from the Icecast API.~~
-+ **(In progress)** Display album cover.
-+ **(Scheduled)** Playback history in the sidebar
++ **(Done)** ~~Playback history in the sidebar~~
++ **(Scheduled)** API for user accounts, its functions and blogging. (https://github.com/tlpr/tlpr-api)
++ **(Delayed)** *Display album cover.*
 + **(Scheduled)** User accounts and like/dislike song function.
 + **(Scheduled)** Website administration panel
 + **(Scheduled)** Embedded KiwiIRC client with similar positioning to Facebook's chat.
 + **(Scheduled)** Text-only website for hardcore backward compatibility.
-+ **(Delayed)** *Fancy, lightweight, optional JavaScript player.*
++ **(Cancelled)** ~~*Fancy, lightweight, optional JavaScript player.*~~
 
 Development roadmap may be a subject to change.
 To propose a new feature, improvement, report a bug or contribute code, please see CONTRIBUTIONS.md
@@ -54,7 +55,3 @@ This software is using "parsedown" package made by erusev.
 It is open-source software licensed under the MIT License
 and copyrighted by Emanuil Rusev, erusev.com.
 https://github.com/erusev/parsedown
-
-Layout of this website is using Goodlight open font by dalerms
-licensed under the SIL Open Font License 1.1
-https://www.dafont.com/goodlight.font

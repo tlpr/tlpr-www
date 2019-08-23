@@ -11,11 +11,14 @@ ini_set("error_reporting", E_ALL);
 # Fallback language
 $default_language = "pl";
 
+# Switch to HTTPS automatically if Upgrade-Insecure-Requests header is enabled.
+$upgrade_https = true;
+
 $icecast_streams = array(
 
-	array("url" => "#", "info" => "320kbps", "type" => "audio/ogg", "playlist_dl" => "#"),
-	array("url" => "#", "info" => "128kbps", "type" => "audio/ogg", "playlist_dl" => "#"),
-	array("url" => "#", "info" => "64kbps", "type" => "audio/ogg", "playlist_dl" => "#")
+	array("url" => "#", "info" => "HQ", "type" => "audio/ogg", "playlist_dl" => "#"),
+	array("url" => "#", "info" => "LQ", "type" => "audio/ogg", "playlist_dl" => "#"),
+	array("url" => "#", "info" => "Mobile", "type" => "audio/ogg", "playlist_dl" => "#")
 
 	# url: Direct link to the stream
 	# info: information of stream shown on the list
@@ -28,7 +31,7 @@ $icecast_streams = array(
 );
 
 # status-json.xsl file url. usually http://your.icecast.server:8000/status-json.xsl
-$icecast_status_json_uri = '#';
+$icecast_status_json_uri = 'http://stream.dtluna.net:8000/status-json.xsl';
 
 # On index page cut the post content after X characters. To view more user is
 # required to visit view_post.php page

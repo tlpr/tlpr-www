@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php require_once("misc/language.php"); ?>
 <?php require_once("misc/config.php"); ?>
+<?php require_once("misc/ssl.php"); ?>
 <?php require_once("blog/view.php"); ?>
 <HTML lang="<?= $locale["language-code"] ?>">
 	
@@ -88,7 +89,8 @@
 				
 				<H4><?= $locale[ "playback-history-name" ] ?></H4>
 				<HR />
-				<P>Playback history is scheduled for development.</P>
+				<NOSCRIPT><?= $locale[ "playback-history-noscript" ] ?></NOSCRIPT>
+				<DIV id="playbackhistory"></DIV>
 				
 				<HR />
 				
