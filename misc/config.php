@@ -31,7 +31,7 @@ $icecast_streams = array(
 );
 
 # status-json.xsl file url. usually http://your.icecast.server:8000/status-json.xsl
-$icecast_status_json_uri = 'http://stream.dtluna.net:8000/status-json.xsl';
+$icecast_status_json_uri = '#';
 
 # On index page cut the post content after X characters. To view more user is
 # required to visit view_post.php page
