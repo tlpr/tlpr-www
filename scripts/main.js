@@ -113,6 +113,10 @@ window.addEventListener("load", function(){
 			[].forEach.call(tabs, function(t){ t.style.background = "#333333"; });
 			tab.style.background = "black";
 			[].forEach.call(streams, function(s){ s.style.display = "none"; });
+      [].forEach.call(streams, function(s){
+        audio_object = s.getElementsByTagName("audio")[0];
+        audio_object.pause();
+      });
 			stream_id = tab.getAttribute("id").slice(-1);
 			document.getElementById("stream-" + stream_id).style.display = "inline-block";
 			active_tab = stream_id
